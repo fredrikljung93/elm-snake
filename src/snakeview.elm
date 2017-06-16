@@ -50,19 +50,19 @@ getImageUrl model cell =
             Maybe.withDefault (Cell -1 -1) (List.Extra.last model.snake)
     in
     if cell == snakeHead && model.currentDirection == UP then
-        "headup.png"
+        "img/headup.png"
     else if cell == snakeHead && model.currentDirection == DOWN then
-        "headdown.png"
+        "img/headdown.png"
     else if cell == snakeHead && model.currentDirection == LEFT then
-        "headleft.png"
+        "img/headleft.png"
     else if cell == snakeHead && model.currentDirection == RIGHT then
-        "headright.png"
+        "img/headright.png"
     else if List.member cell model.snake then
-        "snakebody.png"
+        "img/snakebody.png"
     else if model.fruit == cell then
-        "marlboro.png"
+        "img/marlboro.png"
     else
-        "empty.png"
+        "img/empty.png"
 
 
 gameBoard : Model -> Html Msg
